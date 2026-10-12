@@ -1,0 +1,1212 @@
+<title>B.A.T Plumbing &amp; Maintenance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<meta name="description" content="B.A.T Plumbing &amp; Maintenance, Cape Town. Plumbing and drains, high-pressure jetting, roofing and waterproofing, painting and renovations, property maintenance, pool, irrigation and gardens. Call Brandon on 074 101 2009.">
+
+<style>
+/* ===========================================================
+   B.A.T Plumbing & Maintenance — Cape Town
+   Navy / gold. Palette and type from the reference:
+   ground #172538, gold #B8912C, cream #F2F2F3.
+   Sections alternate light and dark via .light / .dark, which
+   re-point the semantic tokens. Hero and footer stay navy.
+   =========================================================== */
+:root{
+  color-scheme: light dark;
+
+  /* fixed brand values — never flip */
+  --navy:      #172538;
+  --navy-deep: #121D2C;
+  --gold:      #B8912C;
+  --gold-lt:   #D8B24A;
+  --gold-dk:   #8F6E1C;
+  --cream:     #F2F2F3;
+  --teal:      #4FA093;
+  --wa:        #1FAF54;
+
+  /* semantic tokens — dark section defaults */
+  --ground:    #172538;
+  --surface:   #172538;
+  --surface-2: #1C2C42;
+  --raised:    #23374F;
+  --bd:        #2B405A;
+  --bd-2:      #3A5271;
+  --tx:        #F2F2F3;
+  --tx-2:      #B8BBC1;
+  --tx-3:      #8D96A3;
+  --accent-tx: #B8912C;
+  --gold-soft: rgba(184,145,44,.14);
+
+  --r: 14px;
+  --maxw: 1180px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.26), 0 8px 24px rgba(0,0,0,.2);
+  --shadow-2: 0 18px 46px rgba(0,0,0,.4);
+}
+
+/* light bands re-point the same tokens */
+.light{
+  --ground:    #FFFFFF;
+  --surface:   #FFFFFF;
+  --surface-2: #F4F6F8;
+  --raised:    #EDF1F4;
+  --bd:        #E1E6EB;
+  --bd-2:      #C7D0D8;
+  --tx:        #172538;
+  --tx-2:      #4C5D71;
+  --tx-3:      #75859A;
+  --accent-tx: #8F6E1C;
+  --gold-soft: rgba(184,145,44,.10);
+  --shadow-1: 0 1px 2px rgba(23,37,56,.05), 0 8px 24px rgba(23,37,56,.07);
+  --shadow-2: 0 18px 46px rgba(23,37,56,.14);
+}
+.light, .dark{ background:var(--ground); color:var(--tx-2) }
+
+*{box-sizing:border-box}
+html{ scroll-behavior:smooth }
+section[id]{ scroll-margin-top:84px }
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+
+body{
+  margin:0; background:var(--navy); color:var(--tx-2);
+  font-family:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:17px; font-weight:300; line-height:1.68; -webkit-font-smoothing:antialiased;
+  padding-bottom:86px;
+}
+@media (min-width:1060px){ body{padding-bottom:0} }
+
+h1,h2,h3,h4{
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-weight:500; letter-spacing:-.014em; text-wrap:balance;
+  margin:0; color:var(--tx); text-transform:none;
+}
+h1{ font-size:clamp(2.9rem, 7vw, 4.9rem); line-height:1.08 }
+h2{ font-size:clamp(2.3rem, 5.4vw, 3.9rem); line-height:1.12 }
+h3{ font-size:1.7rem; line-height:1.22 }
+h4{ font-size:1.42rem; line-height:1.26 }
+.lede{ line-height:1.58 }
+@media (max-width:480px){ .lede{ font-size:1.2rem } }
+p{margin:0}
+a{color:inherit}
+img{max-width:100%; display:block}
+strong{ color:var(--tx); font-weight:500 }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:4px }
+
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:20px }
+.section{ padding-block:clamp(60px,8vw,110px) }
+
+.eyebrow{
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.22em; font-size:1.0rem; color:var(--accent-tx);
+  display:flex; align-items:center; gap:12px;
+}
+.eyebrow::before{ content:""; width:28px; height:1px; background:var(--gold); flex:none; opacity:.85 }
+.lede{ color:var(--tx-2); font-size:1.35rem; max-width:62ch; font-weight:400 }
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:12px;
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.14em; font-size:0.98rem; padding:15px 30px; border-radius:999px;
+  border:1px solid transparent; text-decoration:none; cursor:pointer; line-height:1;
+  transition:background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.btn svg{ width:17px; height:17px; flex:none }
+.btn-primary{ background:var(--gold); color:var(--navy); border-color:var(--gold) }
+.btn-primary:hover{ background:var(--gold-lt); border-color:var(--gold-lt); transform:translateY(-2px) }
+.btn-outline{ border-color:var(--gold); color:var(--accent-tx); background:transparent }
+.btn-outline:hover{ background:var(--gold-soft); transform:translateY(-2px) }
+.btn-navy{ background:var(--tx); color:var(--ground); border-color:var(--tx) }
+.btn-navy:hover{ transform:translateY(-2px); opacity:.9 }
+.btn-wa{ background:var(--wa); color:#fff; border-color:var(--wa) }
+.btn-wa:hover{ background:#199A48; transform:translateY(-2px) }
+
+.hero-cta .btn::after, .band-cta .btn::after,
+.about-cta .btn::after, .commercial .btn::after{
+  content:""; width:23px; height:23px; border-radius:50%; flex:none;
+  background-color:var(--gold);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23172538' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6 6 6-6 6'/%3E%3C/svg%3E");
+  background-position:center; background-size:11px; background-repeat:no-repeat;
+}
+.hero-cta .btn-primary::after, .band-cta .btn-primary::after,
+.about-cta .btn-navy::after, .commercial .btn-navy::after{
+  background-color:var(--navy);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8912C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6 6 6-6 6'/%3E%3C/svg%3E");
+}
+
+/* ---------- header (always navy) ---------- */
+.header{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:60;
+  background:rgba(23,37,56,.94); backdrop-filter:blur(12px);
+  border-bottom:1px solid #2B405A;
+}
+.header-in{ display:flex; align-items:center; gap:18px; height:74px }
+.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--cream); margin-right:auto }
+.brand svg, .brand img{ width:48px; height:48px; flex:none; object-fit:contain }
+.brand img{ background:var(--cream); border-radius:50%; padding:3px; box-shadow:0 0 0 1px rgba(184,145,44,.45) }
+.brand b{ font-family:"Cormorant Garamond",serif; font-size:1.4rem; font-weight:700; letter-spacing:.04em; display:block; line-height:1; color:var(--cream) }
+.brand i{ font-style:normal; white-space:nowrap; font-size:0.8rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:500 }
+.nav{ display:none; gap:20px }
+.nav a{
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:400; font-size:0.88rem;
+  text-transform:uppercase; letter-spacing:.12em; color:#B8BBC1; white-space:nowrap;
+  text-decoration:none; padding-block:6px; border-bottom:1px solid transparent;
+}
+.nav a:hover{ color:var(--gold); border-color:var(--gold) }
+.header .btn{ padding:12px 20px; font-size:0.82rem; display:none; white-space:nowrap }
+.header .btn-outline{ color:var(--gold) }
+@media (min-width:1060px){ .nav{display:flex} .header .btn{display:inline-flex} }
+
+/* ---------- hero (always navy) ---------- */
+.hero{ background:var(--navy); position:relative; overflow:hidden; color:#B8BBC1 }
+.hero::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:80%;
+  background:radial-gradient(90% 70% at 18% 8%, rgba(184,145,44,.10), transparent 62%);
+}
+.hero-grid{ display:grid; gap:38px; padding-block:clamp(46px,7vw,86px) clamp(52px,7vw,94px); position:relative; z-index:2 }
+@media (min-width:940px){ .hero-grid{ grid-template-columns:1fr 1.06fr; align-items:center; gap:52px } }
+.hero h1{ margin-block:20px 0; color:var(--cream) }
+.hero h1 em{ font-style:italic; color:var(--gold); display:block; font-weight:500 }
+.hero .lede{ margin-top:22px; color:#B8BBC1 }
+.hero .eyebrow{ color:var(--gold) }
+.hero-cta{ display:flex; flex-wrap:wrap; gap:14px; margin-top:34px }
+.hero-cta .btn-outline{ color:var(--gold) }
+.hero-strip{
+  display:flex; flex-wrap:wrap; gap:0 0; margin-top:36px; padding-top:24px;
+  border-top:1px solid #2B405A; font-family:"Plus Jakarta Sans",sans-serif;
+  text-transform:uppercase; letter-spacing:.18em; font-size:0.92rem; font-weight:400; color:#8D96A3;
+}
+.hero-strip span{ padding-right:15px; margin-right:15px; border-right:1px solid #2B405A; margin-bottom:6px }
+.hero-strip span:last-child{ border:0 }
+.hero-media{ position:relative }
+.hero-media img{
+  width:100%; aspect-ratio:4/3; max-height:500px; object-fit:cover; object-position:center 52%;
+  border-radius:var(--r); box-shadow:var(--shadow-2); border:1px solid #2B405A;
+}
+.hero-tag{
+  position:absolute; left:18px; bottom:-18px; background:var(--gold); color:var(--navy);
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.14em; font-size:0.88rem; padding:13px 22px; border-radius:999px; box-shadow:var(--shadow-2);
+}
+.hero-tag i{ font-style:normal }
+
+/* ---------- triage ---------- */
+.triage{ padding-block:clamp(44px,5.5vw,70px) }
+.triage-grid{ display:grid; gap:14px; grid-template-columns:repeat(2,1fr) }
+@media (min-width:760px){ .triage-grid{ grid-template-columns:repeat(4,1fr) } }
+.triage-card{
+  background:var(--surface); border:1px solid var(--bd); border-radius:var(--r);
+  padding:22px 20px 20px; text-decoration:none; color:var(--tx);
+  display:flex; flex-direction:column; gap:9px; box-shadow:var(--shadow-1);
+  transition:transform .18s ease, border-color .18s ease;
+}
+.triage-card:hover{ transform:translateY(-3px); border-color:var(--gold) }
+.triage-card svg{ width:26px; height:26px; color:var(--accent-tx) }
+.triage-card b{ font-family:"Cormorant Garamond",serif; font-weight:600; font-size:1.18rem; line-height:1.2 }
+.triage-card small{ color:var(--tx-3); font-size:1.02rem; line-height:1.45 }
+.triage-card.urgent{ border-color:rgba(184,145,44,.5) }
+
+/* ---------- services / pillars ---------- */
+.pillars{ display:grid; gap:16px; grid-template-columns:1fr; margin-top:36px }
+@media (min-width:640px){ .pillars{ grid-template-columns:repeat(2,1fr) } .svc.feature{ grid-column:span 2 } }
+@media (min-width:1000px){ .pillars{ grid-template-columns:repeat(3,1fr) } }
+.svc{
+  background:var(--surface); border:1px solid var(--bd); border-radius:var(--r);
+  padding:30px 26px 26px; position:relative; overflow:hidden;
+  display:flex; flex-direction:column; gap:12px; box-shadow:var(--shadow-1);
+  transition:transform .18s ease, border-color .18s ease;
+}
+.svc:hover{ transform:translateY(-3px); border-color:var(--gold) }
+.svc::before{ content:""; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); opacity:.8 }
+.svc.plan::before{ background:var(--teal) }
+.svc.feature{ background:var(--raised) }
+.svc.feature h4{ font-size:1.6rem }
+.svc-icon{
+  width:50px; height:50px; border-radius:50%; display:grid; place-items:center;
+  background:var(--gold-soft); color:var(--accent-tx); flex:none; border:1px solid rgba(184,145,44,.38);
+}
+.svc.plan .svc-icon{ background:rgba(79,160,147,.13); color:#2F7F73; border-color:rgba(79,160,147,.38) }
+.dark .svc.plan .svc-icon{ color:var(--teal) }
+.svc-icon svg{ width:23px; height:23px }
+.svc p{ color:var(--tx-2); font-size:1.08rem }
+.svc ul{ margin:4px 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:7px }
+.svc li{ font-size:1.0rem; font-weight:400; color:var(--tx-3); letter-spacing:.02em; border:1px solid var(--bd); border-radius:999px; padding:4px 12px }
+.svc-core{
+  align-self:flex-start; font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.18em; font-size:0.92rem; color:var(--accent-tx);
+  background:var(--gold-soft); border:1px solid rgba(184,145,44,.38); border-radius:999px; padding:4px 12px;
+}
+.svc-link{
+  margin-top:auto; padding-top:18px; font-family:"Plus Jakarta Sans",sans-serif; font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--accent-tx); text-decoration:none; font-size:1.0rem;
+}
+.svc.plan .svc-link{ color:#2F7F73 }
+.dark .svc.plan .svc-link{ color:var(--teal) }
+.svc-link:hover{ text-decoration:underline }
+.commercial{
+  margin-top:18px; background:var(--surface); border:1px solid var(--bd);
+  border-left:2px solid var(--gold); border-radius:var(--r); padding:28px 30px;
+  display:flex; gap:24px; flex-wrap:wrap; align-items:center; box-shadow:var(--shadow-1);
+}
+.commercial .ctext{ flex:1 1 330px }
+.commercial p{ color:var(--tx-2); font-size:1.08rem; margin-top:8px }
+
+/* ---------- texture strip ---------- */
+.spacer{ background:#FFFFFF; height:clamp(46px,7vw,96px) }
+.marquee{ overflow:hidden; background:var(--navy); position:relative }
+.marquee-track{ display:flex; width:max-content; animation:slideRight 52s linear infinite }
+.marquee img{
+  width:clamp(220px,21vw,330px); height:clamp(150px,17vw,230px);
+  object-fit:cover; flex:none; filter:saturate(.7) brightness(.82);
+}
+@keyframes slideRight{ from{ transform:translateX(-50%) } to{ transform:translateX(0) } }
+.marquee:hover .marquee-track{ animation-play-state:paused }
+@media (prefers-reduced-motion:reduce){ .marquee-track{ animation:none; transform:translateX(-50%) } }
+
+/* ---------- area of operation ---------- */
+.ops-grid{ display:grid; gap:13px; grid-template-columns:1fr; margin-top:32px }
+@media (min-width:560px){ .ops-grid{ grid-template-columns:repeat(2,1fr) } }
+@media (min-width:900px){ .ops-grid{ grid-template-columns:repeat(3,1fr) } }
+.ops{
+  display:flex; align-items:center; gap:13px; background:var(--surface);
+  border:1px solid var(--bd); border-radius:999px; padding:15px 24px; box-shadow:var(--shadow-1);
+}
+.ops svg{ width:17px; height:17px; color:var(--accent-tx); flex:none }
+.ops b{ font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; font-size:1.12rem; color:var(--tx) }
+
+/* ---------- drain band ---------- */
+.band{ position:relative; background:var(--ground); overflow:hidden }
+.band>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; opacity:.30 }
+.band.light>img{ opacity:.5 }
+.band::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(100deg, var(--ground) 6%, color-mix(in srgb, var(--ground) 92%, transparent) 46%, color-mix(in srgb, var(--ground) 55%, transparent) 78%, color-mix(in srgb, var(--ground) 30%, transparent) 100%);
+}
+@media (max-width:820px){ .band::after{ background:color-mix(in srgb, var(--ground) 92%, transparent) } }
+.band-in{ position:relative; z-index:2; max-width:620px }
+.band h2{ margin-block:18px 0 }
+.band h2 em{ font-style:italic; color:var(--accent-tx); display:block; font-weight:500 }
+.band .lede{ margin-top:18px }
+.jet{
+  display:inline-flex; align-items:center; gap:10px; margin-top:24px; background:var(--gold-soft);
+  border:1px solid rgba(184,145,44,.42); border-radius:999px; padding:9px 18px;
+  font-size:1.0rem; font-weight:400; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-tx);
+}
+.jet svg{ width:16px; height:16px; flex:none }
+.band-cta{ display:flex; flex-wrap:wrap; gap:14px; margin-top:28px }
+
+/* ---------- about ---------- */
+.about-grid{ display:grid; gap:38px; align-items:center }
+@media (min-width:880px){ .about-grid{ grid-template-columns:.8fr 1.2fr; gap:56px } }
+.about-photo{ position:relative; max-width:390px; margin-inline:auto; width:100% }
+.about-photo img{ width:100%; border-radius:var(--r); box-shadow:var(--shadow-2) }
+.about-photo::before{ content:""; position:absolute; inset:16px -16px -16px 16px; border-radius:var(--r); border:1px solid var(--gold); z-index:-1 }
+.about-photo.is-slot::before{ display:none }
+.photo-slot{
+  aspect-ratio:3/4; border-radius:var(--r); border:1px dashed var(--bd-2);
+  background:var(--surface-2);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:12px; text-align:center; padding:32px 26px;
+}
+.photo-slot .ghost{ width:62px; height:62px; color:var(--bd-2) }
+.photo-slot .ghost svg{ width:100%; height:100% }
+.photo-slot b{ font-family:"Cormorant Garamond",serif; font-weight:600; font-size:1.7rem; color:var(--tx); line-height:1.15 }
+.photo-slot span{ font-size:1.05rem; color:var(--tx-3) }
+.photo-slot .chip{
+  margin-top:6px; font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.18em; font-size:0.92rem; color:var(--accent-tx);
+  background:var(--gold-soft); border:1px solid rgba(184,145,44,.38); border-radius:999px; padding:5px 14px;
+}
+.about h2{ margin-block:18px 0 }
+.about .lede{ margin-top:20px }
+.pledge{ display:grid; gap:13px; margin-top:30px; padding:0; list-style:none }
+@media (min-width:560px){ .pledge{ grid-template-columns:repeat(2,1fr) } }
+.pledge li{ display:flex; gap:12px; align-items:flex-start; font-weight:400; font-size:1.08rem; color:var(--tx) }
+.pledge svg{ width:19px; height:19px; color:var(--accent-tx); flex:none; margin-top:5px }
+.about-cta{ display:flex; flex-wrap:wrap; gap:14px; margin-top:32px }
+
+/* ---------- testimonials ---------- */
+.tm-grid{ display:grid; gap:16px; margin-top:36px; grid-template-columns:1fr }
+@media (min-width:700px){ .tm-grid{ grid-template-columns:repeat(3,1fr) } }
+.tm{
+  background:var(--surface); border:1px solid var(--bd); border-radius:var(--r);
+  padding:30px 26px 24px; display:flex; flex-direction:column; gap:16px; box-shadow:var(--shadow-1);
+}
+.tm .mark{ font-family:"Cormorant Garamond",serif; font-size:3.4rem; line-height:.62; color:var(--gold); font-weight:700 }
+.tm p{ color:var(--tx-2); font-size:1.02rem }
+.tm .who{ margin-top:auto; padding-top:16px; border-top:1px solid var(--bd); display:flex; align-items:center; gap:12px }
+.tm .who .av{
+  width:40px; height:40px; border-radius:50%; background:var(--gold-soft); color:var(--accent-tx);
+  display:grid; place-items:center; font-family:"Cormorant Garamond",serif; font-weight:700;
+  font-size:1.1rem; flex:none; border:1px solid rgba(184,145,44,.38);
+}
+.tm .who .nm{ min-width:0 }
+.tm .who b{ font-family:"Cormorant Garamond",serif; font-weight:600; font-size:1.2rem; display:block; line-height:1.2; color:var(--tx) }
+.tm .who small{ color:var(--tx-3); font-size:1.0rem }
+.tm.slot{ border-style:dashed; border-color:var(--bd-2); background:var(--surface-2); box-shadow:none }
+.tm.slot p{ color:var(--tx-3); font-style:italic }
+.tm .tag{
+  align-self:flex-start; font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.18em; font-size:0.92rem; color:var(--accent-tx);
+  background:var(--gold-soft); border:1px solid rgba(184,145,44,.38); border-radius:999px; padding:4px 12px;
+}
+.tm-note{
+  margin-top:20px; padding:16px 22px; border-radius:var(--r); background:var(--gold-soft);
+  border:1px solid rgba(184,145,44,.32); color:var(--tx-2); font-size:1.05rem;
+}
+.tm-note b{ color:var(--accent-tx) }
+
+/* ---------- gallery ---------- */
+.gal{ display:grid; gap:14px; grid-template-columns:repeat(2,1fr); margin-top:36px }
+@media (min-width:720px){ .gal{ grid-template-columns:repeat(3,1fr) } }
+@media (min-width:1040px){ .gal{ grid-template-columns:repeat(4,1fr) } }
+.gal figure{ margin:0; border-radius:12px; overflow:hidden; position:relative; background:var(--raised); border:1px solid var(--bd) }
+.gal img{ width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .45s ease }
+.gal figure:hover img{ transform:scale(1.06) }
+.gal figcaption{
+  position:absolute; inset:auto 0 0 0; padding:30px 14px 12px; color:#F2F2F3;
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:400; font-size:0.98rem;
+  text-transform:uppercase; letter-spacing:.12em; line-height:1.25;
+  background:linear-gradient(transparent, rgba(11,18,28,.92));
+}
+
+/* ---------- service-area map ---------- */
+.map-wrap{
+  margin-top:28px; border-radius:var(--r); overflow:hidden;
+  border:1px solid var(--bd); box-shadow:var(--shadow-1);
+  aspect-ratio:16/9; max-width:100%; background:var(--surface-2);
+}
+.map-wrap iframe{ width:100%; height:100%; border:0; display:block }
+@media (max-width:720px){ .map-wrap{ aspect-ratio:4/3 } }
+.map-note{ margin-top:14px; font-size:.85rem; color:var(--tx-3) }
+.map-note a{ color:var(--accent-tx); font-weight:600; text-decoration:none }
+.map-note a:hover{ text-decoration:underline }
+@media (max-width:760px){ .map-note{ font-size:.9375rem } }
+
+/* ---------- quote ---------- */
+.quote-grid{ display:grid; gap:40px }
+@media (min-width:920px){ .quote-grid{ grid-template-columns:.85fr 1.15fr; gap:56px } }
+.quote h2{ margin-block:18px 0 }
+.quote h2 em{ font-style:italic; color:var(--accent-tx); display:block; font-weight:500 }
+.quote-side .lede{ margin-top:18px }
+.quick-call{ margin-top:30px; display:grid; gap:11px }
+.qc{
+  display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--tx);
+  background:var(--surface); border:1px solid var(--bd); border-radius:999px; padding:14px 22px;
+  transition:border-color .18s ease, transform .18s ease;
+}
+.qc:hover{ border-color:var(--gold); transform:translateX(4px) }
+.qc svg{ width:19px; height:19px; color:var(--accent-tx); flex:none }
+.qc b{ font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; font-size:1rem; letter-spacing:.02em; display:block; line-height:1.25 }
+.qc small{ color:var(--tx-3); font-size:1.0rem }
+
+form{ background:var(--surface); border:1px solid var(--bd); border-radius:var(--r); padding:clamp(24px,3.4vw,38px); box-shadow:var(--shadow-1) }
+.f-row{ display:grid; gap:16px }
+@media (min-width:600px){ .f-row.two{ grid-template-columns:1fr 1fr } }
+.field{ display:flex; flex-direction:column; gap:8px; margin-bottom:16px }
+.field label{ font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:.16em; font-size:0.95rem; color:var(--tx-3) }
+.field .req{ color:var(--accent-tx) }
+input,select,textarea{
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:300; font-size:1rem; color:var(--tx);
+  background:var(--surface-2); border:1px solid var(--bd); border-radius:10px; padding:14px 16px; width:100%;
+  transition:border-color .18s ease, background .18s ease;
+}
+input::placeholder, textarea::placeholder{ color:var(--tx-3); opacity:.75 }
+input:focus,select:focus,textarea:focus{ outline:none; border-color:var(--gold); background:var(--ground) }
+select option, select optgroup{ background:var(--surface-2); color:var(--tx) }
+textarea{ resize:vertical; min-height:118px; line-height:1.6 }
+select{ appearance:none; background-image:linear-gradient(45deg,transparent 50%,var(--accent-tx) 50%),linear-gradient(135deg,var(--accent-tx) 50%,transparent 50%); background-position:calc(100% - 22px) 24px,calc(100% - 16px) 24px; background-size:6px 6px,6px 6px; background-repeat:no-repeat }
+.form-actions{ display:grid; gap:12px; margin-top:8px }
+@media (min-width:520px){ .form-actions{ grid-template-columns:1.25fr 1fr } }
+.form-actions .btn{ width:100% }
+.form-note{ margin-top:18px; font-size:1.02rem; color:var(--tx-3); line-height:1.6 }
+.form-note b{ color:var(--tx); font-weight:500 }
+.err{ color:#C0392B; font-size:1.0rem; font-weight:400 }
+.dark .err{ color:#E8836F }
+
+/* ---------- contact ---------- */
+.contact-grid{ display:grid; gap:16px; margin-top:36px }
+@media (min-width:700px){ .contact-grid{ grid-template-columns:repeat(2,1fr) } }
+@media (min-width:1000px){ .contact-grid{ grid-template-columns:repeat(4,1fr) } }
+.cc{
+  background:var(--surface); border:1px solid var(--bd); border-radius:var(--r); padding:26px;
+  text-decoration:none; color:var(--tx); display:flex; flex-direction:column; gap:6px; box-shadow:var(--shadow-1);
+  transition:transform .18s ease, border-color .18s ease;
+}
+.cc:hover{ transform:translateY(-3px); border-color:var(--gold) }
+.cc-ico{ width:44px; height:44px; border-radius:50%; background:var(--gold-soft); color:var(--accent-tx); display:grid; place-items:center; margin-bottom:8px; border:1px solid rgba(184,145,44,.38) }
+.cc-ico svg{ width:19px; height:19px }
+.cc small{ font-family:"Plus Jakarta Sans",sans-serif; text-transform:uppercase; letter-spacing:.18em; font-size:0.94rem; color:var(--tx-3); font-weight:500 }
+.cc b{ font-family:"Cormorant Garamond",serif; font-weight:600; font-size:1.4rem; line-height:1.2; color:var(--tx) }
+.cc span.sub{ font-size:1.02rem; color:var(--tx-3); word-break:break-word }
+.areas{ margin-top:30px; padding:20px 26px; border-radius:var(--r); background:var(--surface-2); border:1px solid var(--bd); font-size:1.08rem; color:var(--tx-2) }
+.areas b{ color:var(--tx); font-weight:500 }
+
+/* ---------- footer (always navy) ---------- */
+.footer{ background:var(--navy-deep); border-top:1px solid #2B405A; padding-block:52px 34px; color:#8D96A3 }
+.footer-top{ display:grid; gap:34px; padding-bottom:30px; border-bottom:1px solid #2B405A }
+@media (min-width:800px){ .footer-top{ grid-template-columns:1.5fr 1fr 1fr } }
+.footer .brand{ margin-right:0 }
+.footer h5{ font-family:"Cormorant Garamond",serif; font-weight:600; color:var(--cream); font-size:1.24rem; margin:0 0 16px }
+.footer ul{ list-style:none; margin:0; padding:0; display:grid; gap:10px; font-size:1.1rem }
+.footer a{ color:#8D96A3; text-decoration:none }
+.footer a:hover{ color:var(--gold) }
+.footer p{ color:#8D96A3 }
+.footer-slogan{ font-family:"Plus Jakarta Sans",sans-serif; text-transform:uppercase; letter-spacing:.2em; color:var(--gold); font-weight:500; font-size:1.0rem; margin-top:16px }
+.social{ display:flex; gap:11px; margin-top:22px; flex-wrap:wrap }
+.social a{
+  width:46px; height:46px; border-radius:50%; display:grid; place-items:center;
+  background:transparent; border:1px solid #2B405A; color:#B8BBC1;
+  transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.social a svg{ width:19px; height:19px }
+.social a:hover{ transform:translateY(-3px); background:var(--gold); border-color:var(--gold); color:var(--navy) }
+.footer-note{ margin-top:26px; font-size:1.0rem; display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; color:#75859A }
+
+/* ---------- floating WhatsApp tab ---------- */
+.wa-float{
+  position:fixed; right:0; top:58%; transform:translateY(-50%); z-index:75;
+  display:flex; align-items:center; gap:0; text-decoration:none;
+  background:var(--wa); color:#fff; border-radius:999px 0 0 999px;
+  padding:13px 16px 13px 18px; box-shadow:-4px 6px 22px rgba(0,0,0,.3);
+  animation:waSlideIn .7s cubic-bezier(.22,1,.36,1) .9s both;
+}
+.wa-float:hover, .wa-float:focus-visible{ background:#199A48 }
+.wa-float svg{ width:28px; height:28px; flex:none; fill:currentColor }
+.wa-float .wa-label{
+  max-width:0; opacity:0; overflow:hidden; white-space:nowrap;
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; font-size:0.98rem;
+  letter-spacing:.06em; text-transform:uppercase;
+  transition:max-width .34s cubic-bezier(.22,1,.36,1), opacity .24s ease, margin-right .34s ease;
+}
+.wa-float:hover .wa-label, .wa-float:focus-visible .wa-label{ max-width:240px; opacity:1; margin-right:12px }
+@keyframes waSlideIn{ from{ transform:translate(100%,-50%) } to{ transform:translate(0,-50%) } }
+@media (max-width:520px){
+  .wa-float{ padding:11px 13px 11px 15px; top:62% }
+  .wa-float svg{ width:24px; height:24px }
+}
+@media (prefers-reduced-motion:reduce){
+  .wa-float{ animation:none }
+  .wa-float .wa-label{ transition:none }
+}
+
+/* ---------- mobile action bar ---------- */
+.actionbar{
+  position:fixed; left:0; right:0; bottom:0; z-index:70;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#2B405A;
+  border-top:1px solid #2B405A; padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.actionbar a{
+  background:var(--navy-deep); color:var(--cream); text-decoration:none; text-align:center;
+  padding:14px 6px; display:flex; flex-direction:column; align-items:center; gap:5px;
+  font-family:"Plus Jakarta Sans",sans-serif; font-weight:500; text-transform:uppercase;
+  letter-spacing:.13em; font-size:0.82rem; line-height:1;
+}
+.actionbar a svg{ width:19px; height:19px; color:var(--gold) }
+.actionbar a.wa{ background:var(--wa); color:#fff } .actionbar a.wa svg{ color:#fff }
+.actionbar a.q{ background:var(--gold); color:var(--navy) } .actionbar a.q svg{ color:var(--navy) }
+@media (min-width:1060px){ .actionbar{ display:none } }
+
+
+/* ===========================================================
+   JJR Electech typography system, applied to B.A.T
+   Cormorant Garamond (headings) + Plus Jakarta Sans (everything
+   else). No italics anywhere, per the spec.
+
+   Desktop sizes follow the measured JJR values. On phones a
+   16px floor is enforced on running text and a 15px floor on
+   controls: the spec's 13-15px values are below the size
+   Google's mobile report treats as legible, and small text on
+   a phone was the reported problem. Both fixes listed on the
+   spec's "Fonts & Fixes" sheet are applied.
+   =========================================================== */
+
+/* headings — Cormorant Garamond */
+h1{ font-size:clamp(2.6rem, 8vw, 3.6rem); font-weight:600; letter-spacing:normal; line-height:1.08 }
+h2{ font-size:clamp(2.1rem, 5.2vw, 3.2rem); font-weight:500; letter-spacing:normal; line-height:1.14 }
+h3{ font-size:1.4rem;   font-weight:500; letter-spacing:normal; line-height:1.3 }
+h4{ font-size:1.375rem; font-weight:500; letter-spacing:normal; line-height:1.3 }
+.svc.feature h4{ font-size:1.5rem }
+.cc b, .photo-slot b, .tm .who b, .triage-card b{ font-weight:500; letter-spacing:normal }
+.cc b{ font-size:1.4rem }
+.triage-card b{ font-size:1.25rem }
+.tm .who b{ font-size:1.2rem }
+.photo-slot b{ font-size:1.6rem }
+.footer h5{ font-size:1.25rem; font-weight:600 }
+.brand b{ font-size:1.5rem; font-weight:700; letter-spacing:.02em }
+
+/* no italics anywhere */
+.hero h1 em, .band h2 em, .quote h2 em, .tm.slot p, em{ font-style:normal }
+
+/* body + UI — Plus Jakarta Sans */
+body{ font-size:1.05rem; font-weight:400; line-height:1.65 }
+.lede{ font-size:1.15rem; font-weight:400; line-height:1.6 }
+.svc p, .commercial p, .pledge li, .tm p, .areas, .form-note,
+.triage-card small, .cc span.sub, .qc small, .tm .who small, .tm-note, .ops b{
+  font-size:1rem; font-weight:400;
+}
+.ops b{ font-weight:500 }
+
+/* gold labels above headings */
+.eyebrow{ font-size:.8rem; font-weight:600; letter-spacing:.16em }
+.svc-core, .tm .tag, .photo-slot .chip, .cc small, .field label{
+  font-size:.8rem; font-weight:600; letter-spacing:.14em;
+}
+
+/* menu, buttons, links, captions, footer */
+.nav a{ font-size:.8rem; font-weight:500; letter-spacing:.08em }
+.btn{ font-size:.82rem; font-weight:600; letter-spacing:.1em }
+.header .btn{ font-size:.78rem }
+.svc-link{ font-size:.82rem; font-weight:600; letter-spacing:.1em }
+.gal figcaption{ font-size:.82rem; font-weight:400; letter-spacing:.06em }
+.footer ul, .footer-note, .footer p{ font-size:.85rem; font-weight:400 }
+.footer-slogan{ font-size:.8rem; font-weight:600; letter-spacing:.16em }
+.svc li{ font-size:.88rem; font-weight:400 }
+.hero-strip{ font-size:.8rem; font-weight:500; letter-spacing:.14em }
+.jet{ font-size:.82rem; font-weight:600; letter-spacing:.1em }
+.qc b{ font-size:1rem; font-weight:600 }
+input, select, textarea{ font-size:1rem; font-weight:400 }
+.actionbar a{ font-size:.75rem; font-weight:600; letter-spacing:.08em }
+.wa-float .wa-label{ font-size:.85rem; font-weight:600; letter-spacing:.1em }
+
+/* ---- phone: hold a 16px floor on reading text, 15px on controls ---- */
+@media (max-width:760px){
+  body{ font-size:1rem }
+  .lede{ font-size:1.0625rem }
+  .svc p, .commercial p, .pledge li, .tm p, .areas, .form-note,
+  .triage-card small, .cc span.sub, .qc small, .tm .who small, .tm-note{ font-size:1rem }
+  .eyebrow, .svc-core, .tm .tag, .photo-slot .chip, .cc small, .field label,
+  .footer-slogan, .hero-strip{ font-size:.875rem }
+  .btn, .svc-link, .jet, .gal figcaption, .svc li,
+  .footer ul, .footer-note, .footer p, .wa-float .wa-label{ font-size:.9375rem }
+  .actionbar a{ font-size:.8125rem }
+  h3{ font-size:1.35rem } h4{ font-size:1.3rem } .svc.feature h4{ font-size:1.4rem }
+}
+</style>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="B.A.T Plumbing and Maintenance, home">
+      <img src="img/bat-logo.png" alt="B.A.T Plumbing &amp; Maintenance logo" width="512" height="512">
+      <span><b>B.A.T</b><i>Plumbing &amp; Maintenance</i></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#drains">Drains</a>
+      <a href="#brandon">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#work">Our Work</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#quote">Request a Quote</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Cape Town · Residential &amp; Commercial</p>
+      <h1>Plumbing &amp;<br>Maintenance<em>You Can Trust</em></h1>
+      <p class="lede">
+        From burst pipes and blocked drains to roofing, painting and full bathroom
+        makeovers — Brandon and the B.A.T team keep your property working and looking
+        its best. One team, one number, sorted properly the first time.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#quote">Request a Quote</a>
+        <a class="btn btn-outline" href="tel:+27741012009">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Brandon
+        </a>
+      </div>
+      <p class="hero-strip">
+        <span>Plumbing</span><span>Drains</span><span>Roofing</span><span>Painting</span><span>Maintenance</span><span>Outdoor</span>
+      </p>
+    </div>
+    <div class="hero-media">
+      <img src="img/bat-plumbing-van-side-cape-town.jpg" width="1448" height="1086"
+           alt="The B.A.T Plumbing and Maintenance branded bakkie showing the logo, services and contact email, parked in central Cape Town">
+      <p class="hero-tag"><i>See the van? Help is on the way.</i></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRIAGE ============ -->
+<section class="light triage" aria-label="Common problems">
+  <div class="wrap"><div class="triage-grid">
+    <a class="triage-card urgent" href="#quote" data-preset="Blocked drain / jetting">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v6m0 0 3-3m-3 3L9 5"/><path d="M4 12h16v3a8 8 0 0 1-16 0z"/><path d="M8 22h8"/></svg>
+      <b>Blocked Drain</b><small>High-pressure jetting available</small>
+    </a>
+    <a class="triage-card urgent" href="#quote" data-preset="Plumbing repair (leak / burst)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22a6 6 0 0 0 6-6c0-4-6-11-6-11S6 12 6 16a6 6 0 0 0 6 6z"/></svg>
+      <b>Leak or Burst</b><small>Pipes, taps, geysers, cisterns</small>
+    </a>
+    <a class="triage-card" href="#quote" data-preset="General maintenance / handyman">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+      <b>Something Broken</b><small>Roofs, doors, general repairs</small>
+    </a>
+    <a class="triage-card" href="#quote" data-preset="Bathroom makeover">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 3.5 6 6"/><path d="M4 20.5 15.5 9l-.5-.5a3.5 3.5 0 0 0-5 0L3 16v4.5z"/><path d="M17 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg>
+      <b>Planning an Upgrade</b><small>Bathrooms, painting, makeovers</small>
+    </a>
+  </div></div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section dark" id="services">
+  <div class="wrap">
+    <p class="eyebrow">What we do</p>
+    <h2>More than a plumber</h2>
+    <p class="lede" style="margin-top:16px">
+      B.A.T works across five areas of property care. Plumbing is where it started and
+      still the bulk of the work — but the same team handles the roof, the paintwork, the
+      running repairs and the grounds, so you're not chasing five different trades.
+    </p>
+
+    <div class="pillars">
+      <article class="svc feature">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 1-5 5L4 17v3h3l5.7-5.7a4 4 0 0 1 5-5l2.3-2.3-2-2z"/></svg></div>
+        <span class="svc-core">Core service</span>
+        <h4>Plumbing &amp; Drains</h4>
+        <p>The heart of what B.A.T does — water in, water out. From a dripping tap or a burst pipe to a blocked line that needs the jetting machine, this is the work the team is on most days.</p>
+        <ul><li>Plumbing installation</li><li>Leak repairs</li><li>Blocked drains</li><li>Drain cleaning</li><li>High-pressure jetting</li><li>Shower installation</li><li>Geysers &amp; heat pumps</li><li>Cisterns</li></ul>
+        <a class="svc-link" href="#quote" data-preset="Plumbing repair (leak / burst)">Request plumbing help →</a>
+      </article>
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 12 3l10 8"/><path d="M5 10v11h14V10"/><path d="M2 11h20"/><path d="M9 21v-6h6v6"/></svg></div>
+        
+        <h4>Roofing &amp; Waterproofing</h4>
+        <p>Keeping the weather out, before a small leak turns into a ceiling.</p>
+        <ul><li>Emergency roof repair</li><li>Roof replacement</li><li>Roof waterproofing</li><li>Gutter installation &amp; repair</li></ul>
+        <a class="svc-link" href="#quote" data-preset="Roofing, waterproofing or gutters">Book a roof inspection →</a>
+      </article>
+      <article class="svc plan">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 3H8v6h11a2 2 0 0 0 0-4"/><path d="M13 9v3a2 2 0 0 1-2 2h-1a2 2 0 0 0-2 2v1"/><rect x="6" y="17" width="4" height="5" rx="1"/></svg></div>
+        
+        <h4>Renovations &amp; Finishes</h4>
+        <p>Making the place look the way you actually want it to look.</p>
+        <ul><li>Renovations</li><li>Painting</li><li>Exterior painting</li><li>Tiling &amp; grouting</li><li>Bathroom makeovers</li><li>Full home makeovers</li></ul>
+        <a class="svc-link" href="#quote" data-preset="Full home makeover / renovation">Discuss my project →</a>
+      </article>
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/><path d="M10 13v2h4v-2"/></svg></div>
+        
+        <h4>Property Maintenance</h4>
+        <p>The running repairs that keep a home or premises in good order.</p>
+        <ul><li>General maintenance</li><li>Home &amp; office maintenance</li><li>Handyman services</li><li>High-pressure cleaning</li><li>Door repairs</li></ul>
+        <a class="svc-link" href="#quote" data-preset="General maintenance / handyman">Request maintenance →</a>
+      </article>
+      <article class="svc plan">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-8 6-13 16-14 0 10-5 15-13 15H4z"/><path d="M4 20c4-6 8-8 12-9"/></svg></div>
+        
+        <h4>Outdoor &amp; Grounds</h4>
+        <p>Everything outside the walls, kept working and kept tidy.</p>
+        <ul><li>Irrigation</li><li>Pool maintenance</li><li>Gardening &amp; landscaping</li></ul>
+        <a class="svc-link" href="#quote" data-preset="Pool, irrigation or garden">Ask about outdoor work →</a>
+      </article>
+    </div>
+
+    <div class="commercial">
+      <div class="ctext">
+        <h4>Landlords, offices &amp; body corporates</h4>
+        <p>
+          Managing rental properties or business premises? B.A.T already covers plumbing,
+          roofing, painting, cleaning and grounds — so one call handles most of what a
+          building throws at you. Talk to Brandon about ongoing or scheduled work.
+        </p>
+      </div>
+      <a class="btn btn-navy" href="#quote" data-preset="Home or office maintenance">Talk about ongoing maintenance</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEXTURE STRIP (detached, sliding) ============ -->
+<div class="spacer"></div>
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+      <img loading="lazy" src="img/corroded-brass-valve-water-leak-repair.jpg" alt="">
+      <img loading="lazy" src="img/chrome-angle-stop-valve-plumbing-fitting.jpg" alt="">
+      <img loading="lazy" src="img/bat-plumbing-exterior-pvc-pipes-cape-town.jpg" alt="">
+      <img loading="lazy" src="img/black-white-pvc-pipe-corner-artistic.jpg" alt="">
+      <img loading="lazy" src="img/red-wheel-valve-sunlit-tiled-corner.jpg" alt="">
+      <img loading="lazy" src="img/corroded-brass-valve-water-leak-repair.jpg" alt="">
+      <img loading="lazy" src="img/chrome-angle-stop-valve-plumbing-fitting.jpg" alt="">
+      <img loading="lazy" src="img/bat-plumbing-exterior-pvc-pipes-cape-town.jpg" alt="">
+      <img loading="lazy" src="img/black-white-pvc-pipe-corner-artistic.jpg" alt="">
+      <img loading="lazy" src="img/red-wheel-valve-sunlit-tiled-corner.jpg" alt="">
+  </div>
+</section>
+
+<!-- ============ DRAIN BAND ============ -->
+<section class="band light" id="drains">
+  <img src="img/drain-cleaning-hose-manhole-service.jpg" alt="" aria-hidden="true">
+  <div class="wrap section">
+    <div class="band-in">
+      <p class="eyebrow">Our specialist kit</p>
+      <h2>Blocked drain?<em>We've got the gear to clear it.</em></h2>
+      <p class="lede">
+        Plungers and drain cleaner only go so far. B.A.T runs high-pressure water jetting
+        equipment that cuts through grease, roots and years of build-up — clearing the
+        line properly instead of buying you another month.
+      </p>
+      <p class="jet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22a6 6 0 0 0 6-6c0-4-6-11-6-11S6 12 6 16a6 6 0 0 0 6 6z"/></svg>
+        High-pressure water jetting · Cape Town
+      </p>
+      <div class="band-cta">
+        <a class="btn btn-primary" href="#quote" data-preset="Blocked drain / jetting">Get help with a blocked drain</a>
+        <a class="btn btn-outline" href="tel:+27741012009">074 101 2009</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEET BRANDON ============ -->
+<section class="section about dark" id="brandon">
+  <div class="wrap about-grid">
+    <div class="about-photo is-slot">
+      <div class="photo-slot">
+        <span class="ghost" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"/></svg>
+        </span>
+        <b>Brandon Herring</b>
+        <span>B.A.T Plumbing &amp; Maintenance</span>
+        <span class="chip">Photo to come</span>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Meet the team</p>
+      <h2>Professional service.<br>Personal touch.</h2>
+      <p class="lede">
+        When you let someone into your home, you want to know who's coming. At B.A.T
+        you deal directly with <strong>Brandon and Elmare Herring</strong> — not a call
+        centre, not a rotating list of subcontractors.
+      </p>
+      <p class="lede" style="margin-top:14px">
+        Every leak, repair, installation and makeover gets the same approach: turn up when
+        we say we will, explain what's actually wrong, and do the job properly.
+      </p>
+      <ul class="pledge">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg> Reliable, on-time service</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg> Quality workmanship</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg> Practical, honest solutions</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg> Homes and businesses</li>
+      </ul>
+      <div class="about-cta">
+        <a class="btn btn-navy" href="tel:+27741012009">Talk to Brandon</a>
+        <a class="btn btn-outline" href="#quote">Request a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section light" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">What customers say</p>
+    <h2>Word of mouth, in writing</h2>
+    <p class="lede" style="margin-top:16px">
+      Most of B.A.T's work comes from neighbours telling neighbours. These slots are ready
+      for real reviews from the Facebook page and from customers who've messaged on WhatsApp.
+    </p>
+    <div class="tm-grid">
+      <article class="tm slot">
+        <span class="tag">Placeholder</span>
+        <span class="mark" aria-hidden="true">“</span>
+        <p>Paste a real customer review here — ideally one that names the job (blocked drain, geyser, bathroom) and the suburb.</p>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span class="nm"><b>Customer name</b><small>Suburb, Cape Town</small></span>
+        </div>
+      </article>
+      <article class="tm slot">
+        <span class="tag">Placeholder</span>
+        <span class="mark" aria-hidden="true">“</span>
+        <p>A second review works best if it covers a different service to the first — roofing or painting rather than another drain job.</p>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span class="nm"><b>Customer name</b><small>Suburb, Cape Town</small></span>
+        </div>
+      </article>
+      <article class="tm slot">
+        <span class="tag">Placeholder</span>
+        <span class="mark" aria-hidden="true">“</span>
+        <p>A third from a landlord, body corporate or business customer would balance the residential reviews above.</p>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span class="nm"><b>Customer name</b><small>Suburb, Cape Town</small></span>
+        </div>
+      </article>
+    </div>
+    <p class="tm-note">
+      <b>Before this page goes live:</b> replace all three slots with genuine reviews and get the
+      customer's permission to use their name. Nothing here is invented — no fake reviews have
+      been written into this page.
+    </p>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section dark" id="work">
+  <div class="wrap">
+    <p class="eyebrow">Recent work</p>
+    <h2>Jobs off the B.A.T van</h2>
+    <p class="lede" style="margin-top:18px">
+      Real jobs completed around Cape Town — roofs restored and waterproofed, bathrooms
+      fitted, geysers and heat pumps installed, and everyday plumbing put right.
+    </p>
+    <div class="gal">
+      <figure><img loading="lazy" src="img/tiled-roof-restoration-cape-town.jpg" alt="Tiled roof resealed and recoated in terracotta on a Cape Town home"><figcaption>Tiled roof restoration</figcaption></figure>
+      <figure><img loading="lazy" src="img/roof-sheeting-waterproof-coating-cape-town.jpg" alt="Corrugated roof sheeting coated in orange waterproofing beside tiled roof"><figcaption>Roof sheeting waterproofed</figcaption></figure>
+      <figure><img loading="lazy" src="img/roof-tile-ridge-repair-cape-town.jpg" alt="Close view of roof tiles and ridge capping meeting a valley"><figcaption>Ridge &amp; valley repair</figcaption></figure>
+      <figure><img loading="lazy" src="img/roof-tiles-resealed-repainted-cape-town.jpg" alt="Roof tiles resealed and repainted with pointing renewed along the ridge"><figcaption>Tiles resealed &amp; pointed</figcaption></figure>
+      <figure><img loading="lazy" src="img/roof-gutter-installation-cape-town.jpg" alt="New gutter and downpipe fitted along a tiled roofline"><figcaption>Gutter &amp; downpipe fitted</figcaption></figure>
+      <figure><img loading="lazy" src="img/completed-bathroom-renovation-cape-town.jpg" alt="Completed bathroom with wall-hung toilet, vanity and open shower area"><figcaption>Bathroom fit-out</figcaption></figure>
+      <figure><img loading="lazy" src="img/luxury-bathroom-freestanding-bath-shower.jpg" alt="Finished bathroom with freestanding bath and walk-in glass shower"><figcaption>Freestanding bath &amp; walk-in shower</figcaption></figure>
+      <figure><img loading="lazy" src="img/double-vessel-basin-vanity-black-tapware.jpg" alt="Double vessel basin vanity with black tapware and large mirror"><figcaption>Double vanity, black tapware</figcaption></figure>
+      <figure><img loading="lazy" src="img/geyser-installation-exterior-wall-cape-town.jpg" alt="Ariston geyser installed on an exterior wall with lagged pipework"><figcaption>Exterior geyser install</figcaption></figure>
+      <figure><img loading="lazy" src="img/outdoor-heat-pump-installation-cape-town.jpg" alt="ITS heat pump unit installed on brackets outside a home"><figcaption>Heat pump installation</figcaption></figure>
+      <figure><img loading="lazy" src="img/concealed-cistern-installation-in-progress.jpg" alt="Concealed cistern frame levelled and fixed into a wall during installation"><figcaption>Concealed cistern, in progress</figcaption></figure>
+      <figure><img loading="lazy" src="img/wall-hung-toilet-concealed-cistern-install.jpg" alt="Wall-hung toilet with chrome flush plate on grey tiling"><figcaption>Wall-hung toilet &amp; flush plate</figcaption></figure>
+      <figure><img loading="lazy" src="img/chrome-rain-shower-head-installation.jpg" alt="Chrome rain shower head and concealed mixer on grey tiles"><figcaption>Rain shower &amp; mixer</figcaption></figure>
+      <figure><img loading="lazy" src="img/bathroom-vanity-basin-installation-cape-town.jpg" alt="New wall-hung vanity basin installed, protective tape still in place"><figcaption>Vanity basin install</figcaption></figure>
+      <figure><img loading="lazy" src="img/compact-wall-hung-vanity-basin-closeup.jpg" alt="Compact wall-hung vanity and basin fitted against fresh tiling"><figcaption>Compact vanity fit</figcaption></figure>
+      <figure><img loading="lazy" src="img/under-sink-water-filter-plumbing-repair.jpg" alt="Under-sink plumbing with water filter unit and new waste pipework"><figcaption>Under-sink filter &amp; waste</figcaption></figure>
+      <figure><img loading="lazy" src="img/geyser-thermostat-electrical-connection-repair.jpg" alt="Geyser thermostat and element connections during a service"><figcaption>Geyser element &amp; thermostat</figcaption></figure>
+      <figure><img loading="lazy" src="img/toilet-dual-flush-button-replacement-part.jpg" alt="Replacement dual-flush button mechanism held beside a cistern"><figcaption>Dual-flush mechanism swap</figcaption></figure>
+      <figure><img loading="lazy" src="img/exterior-pvc-pipe-elbow-fitting-repair.jpg" alt="New PVC waste pipe and elbow fitted through an exterior wall"><figcaption>New waste line through wall</figcaption></figure>
+      <figure><img loading="lazy" src="img/bat-plumber-kitchen-sink-repair-cape-town.jpg" alt="B.A.T technician working on pipework beneath a kitchen sink"><figcaption>Kitchen sink pipework</figcaption></figure>
+      <figure><img loading="lazy" src="img/brass-tap-succulent-bathroom-decor.jpg" alt="Brass stopcock and tap on a tiled wall beside a potted succulent"><figcaption>Stopcock &amp; tap detail</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="section light quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-side">
+      <p class="eyebrow">Free, no-obligation</p>
+      <h2>Something needs fixing?<em>Let's get it sorted.</em></h2>
+      <p class="lede">
+        Tell us what's going on and we'll come back to you with a quote. The fastest
+        route is WhatsApp — you can send photos of the problem straight from your phone.
+      </p>
+      <div class="quick-call">
+        <a class="qc" href="tel:+27741012009">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><b>Brandon — 074 101 2009</b><small>Tap to call</small></span>
+        </a>
+        <a class="qc" href="tel:+27825565044">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><b>Elmare — 082 556 5044</b><small>Tap to call</small></span>
+        </a>
+        <a class="qc" href="mailto:batplumbingandmaint@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <span><b>Email B.A.T</b><small>batplumbingandmaint@gmail.com</small></span>
+        </a>
+      </div>
+    </div>
+
+    <form id="quoteForm" novalidate>
+      <div class="f-row two">
+        <div class="field">
+          <label for="q-name">Your name <span class="req">*</span></label>
+          <input id="q-name" name="name" type="text" autocomplete="name" placeholder="e.g. Thandi Mkhize" required>
+        </div>
+        <div class="field">
+          <label for="q-phone">Phone / WhatsApp <span class="req">*</span></label>
+          <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 082 123 4567" required>
+        </div>
+      </div>
+      <div class="f-row two">
+        <div class="field">
+          <label for="q-email">Email</label>
+          <input id="q-email" name="email" type="email" autocomplete="email" placeholder="you@example.co.za">
+        </div>
+        <div class="field">
+          <label for="q-area">Suburb / area</label>
+          <input id="q-area" name="area" type="text" placeholder="e.g. Goodwood, Cape Town">
+        </div>
+      </div>
+      <div class="field">
+        <label for="q-service">What do you need? <span class="req">*</span></label>
+        <select id="q-service" name="service" required>
+          <option value="">Choose a service…</option>
+          <optgroup label="Repairs &amp; emergencies">
+            <option>Plumbing repair (leak / burst)</option>
+            <option>Blocked drain / jetting</option>
+            <option>Geyser / heat pump</option>
+            <option>Roofing, waterproofing or gutters</option>
+            <option>Door repair</option>
+          </optgroup>
+          <optgroup label="Improvements">
+            <option>Painting (interior / exterior)</option>
+            <option>Bathroom makeover</option>
+            <option>Full home makeover / renovation</option>
+            <option>Tiling &amp; grouting</option>
+          </optgroup>
+          <optgroup label="Ongoing &amp; outdoor">
+            <option>General maintenance / handyman</option>
+            <option>Home or office maintenance</option>
+            <option>High-pressure cleaning</option>
+            <option>Pool, irrigation or garden</option>
+          </optgroup>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="q-urgency">How soon?</label>
+        <select id="q-urgency" name="urgency">
+          <option>As soon as possible — it's urgent</option>
+          <option selected>Within the next few days</option>
+          <option>Just planning / getting prices</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="q-message">Tell us about the problem <span class="req">*</span></label>
+        <textarea id="q-message" name="message" required placeholder="What's happening, how long it's been going on, and anything you've already tried."></textarea>
+      </div>
+      <p id="q-error" class="err" hidden>Please fill in your name, phone number, service and a short description.</p>
+      <div class="form-actions">
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.6L9 6.6c-.2-.5-.4-.5-.6-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Send via WhatsApp
+        </button>
+        <button class="btn btn-outline" type="button" id="emailBtn">Send by email</button>
+      </div>
+      <p class="form-note">
+        <b>Got a photo of the problem?</b> Choose WhatsApp — your message opens pre-filled
+        and you can attach photos before sending. Nothing is stored on this website.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section dark" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Talk to B.A.T</h2>
+    <div class="contact-grid">
+      <a class="cc" href="tel:+27741012009">
+        <span class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <small>Brandon Herring</small><b>074 101 2009</b><span class="sub">Tap to call</span>
+      </a>
+      <a class="cc" href="tel:+27825565044">
+        <span class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <small>Elmare Herring</small><b>082 556 5044</b><span class="sub">Tap to call</span>
+      </a>
+      <a class="cc" href="mailto:batplumbingandmaint@gmail.com">
+        <span class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+        <small>Email</small><b>Send a mail</b><span class="sub">batplumbingandmaint@gmail.com</span>
+      </a>
+      <a class="cc" href="https://www.facebook.com/61568315788117/" target="_blank" rel="noopener">
+        <span class="cc-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7.5c0-.8.2-1.2 1.3-1.2H17V3.1A18 18 0 0 0 14.6 3C12 3 10.3 4.6 10.3 7.4V9H8v3.5h2.3V21H14v-8.5h2.5l.4-3.5z"/></svg></span>
+        <small>Social</small><b>Facebook</b><span class="sub">B.A.T Plumbing &amp; Maintenance</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AREA OF OPERATION ============ -->
+<section class="section light" id="areas">
+  <div class="wrap">
+    <p class="eyebrow">Where we work</p>
+    <h2>B.A.T covers Cape Town</h2>
+    <p class="lede" style="margin-top:18px">
+      Brandon and the team work across the city and the surrounding areas. Call-outs are
+      handled from the B.A.T vehicle, so travel time matters more than any hard boundary
+      line — if you're near one of these areas, it's worth asking.
+    </p>
+    <div class="ops-grid">
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>City Bowl &amp; CBD</b></div>
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Atlantic Seaboard</b></div>
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Southern Suburbs</b></div>
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Northern Suburbs</b></div>
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>Cape Flats</b></div>
+      <div class="ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><b>West Coast &amp; Blaauwberg</b></div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=Cape%20Town%2C%20South%20Africa&t=&z=10&ie=UTF8&iwloc=&output=embed"
+        title="Map of Cape Town, the area B.A.T Plumbing &amp; Maintenance works in"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <p class="map-note">
+      The map shows B.A.T's working area, not a shopfront &mdash; the team works out of the
+      vehicle and comes to you.
+      <a href="https://www.google.com/maps/place/Cape+Town" target="_blank" rel="noopener">Open in Google Maps</a>
+    </p>
+    <p class="tm-note">
+      <b>Coverage to confirm:</b> these are the broad Cape Town areas, not a list B.A.T has
+      signed off. Ask Brandon which suburbs he actually travels to and whether there's a
+      call-out fee beyond a certain radius, then this section can be made exact.
+    </p>
+    <div class="about-cta">
+      <a class="btn btn-outline" href="tel:+27741012009">Check if you're in range</a>
+    </div>
+  </div>
+</section>
+
+<div class="spacer"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#top">
+          <img src="img/bat-logo.png" alt="" aria-hidden="true" width="512" height="512">
+          <span><b>B.A.T</b><i>Plumbing &amp; Maintenance</i></span>
+        </a>
+        <p class="footer-slogan">Big or small · We can do it all</p>
+        <p style="margin-top:10px; font-size:.95rem; max-width:38ch">
+          Plumbing, drains, roofing, renovations, maintenance and grounds — across Cape Town.
+        </p>
+        <div class="social">
+          <a class="fb" href="https://www.facebook.com/61568315788117/" target="_blank" rel="noopener" aria-label="B.A.T on Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7.5c0-.8.2-1.2 1.3-1.2H17V3.1A18 18 0 0 0 14.6 3C12 3 10.3 4.6 10.3 7.4V9H8v3.5h2.3V21H14v-8.5h2.5l.4-3.5z"/></svg>
+          </a>
+          <a class="wa" href="https://wa.me/27741012009" target="_blank" rel="noopener" aria-label="WhatsApp B.A.T" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.6L9 6.6c-.2-.5-.4-.5-.6-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          </a>
+          <a class="em" href="mailto:batplumbingandmaint@gmail.com" aria-label="Email B.A.T" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          </a>
+          <a class="ph" href="tel:+27741012009" aria-label="Call B.A.T" title="Call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Plumbing &amp; drains</a></li>
+          <li><a href="#drains">High-pressure drain jetting</a></li>
+          <li><a href="#services">Roofing &amp; waterproofing</a></li>
+          <li><a href="#services">Renovations &amp; painting</a></li>
+          <li><a href="#services">Property maintenance</a></li>
+          <li><a href="#services">Pool, irrigation &amp; gardens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+27741012009">Brandon — 074 101 2009</a></li>
+          <li><a href="tel:+27825565044">Elmare — 082 556 5044</a></li>
+          <li><a href="mailto:batplumbingandmaint@gmail.com">batplumbingandmaint@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/61568315788117/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#quote">Request a quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© <span id="yr">2026</span> B.A.T Plumbing &amp; Maintenance · Cape Town, South Africa</span>
+      <span>Plumbing · Drains · Roofing · Renovations · Maintenance · Outdoor</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/27741012009?text=Hi%20B%2EA%2ET%2C%20I%20found%20your%20website%20and%20I%27d%20like%20to%20ask%20about%20a%20job%2E" target="_blank" rel="noopener" aria-label="Chat to B.A.T on WhatsApp">
+  <span class="wa-label">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.6L9 6.6c-.2-.5-.4-.5-.6-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<!-- ============ MOBILE ACTION BAR ============ -->
+<nav class="actionbar" aria-label="Quick contact">
+  <a href="tel:+27741012009">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a class="wa" href="https://wa.me/27741012009" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.6L9 6.6c-.2-.5-.4-.5-.6-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    WhatsApp
+  </a>
+  <a class="q" href="#quote">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 14h6M9 18h4"/></svg>
+    Get Quote
+  </a>
+</nav>
+
+<script>
+(function () {
+  "use strict";
+  var WA_NUMBER = "27741012009";
+  var EMAIL = "batplumbingandmaint@gmail.com";
+
+  var form    = document.getElementById("quoteForm");
+  var errBox  = document.getElementById("q-error");
+  var service = document.getElementById("q-service");
+
+  try { document.getElementById("yr").textContent = new Date().getFullYear(); } catch (e) {}
+
+  document.querySelectorAll("[data-preset]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var want = el.getAttribute("data-preset");
+      Array.prototype.forEach.call(service.options, function (opt) {
+        if (opt.value === want || opt.text === want) { service.value = opt.value || opt.text; }
+      });
+      window.setTimeout(function () {
+        try { document.getElementById("q-name").focus({ preventScroll: true }); } catch (e) {}
+      }, 500);
+    });
+  });
+
+  function values() {
+    return {
+      name:    document.getElementById("q-name").value.trim(),
+      phone:   document.getElementById("q-phone").value.trim(),
+      email:   document.getElementById("q-email").value.trim(),
+      area:    document.getElementById("q-area").value.trim(),
+      service: service.value,
+      urgency: document.getElementById("q-urgency").value,
+      message: document.getElementById("q-message").value.trim()
+    };
+  }
+
+  function valid(v) {
+    var ok = v.name && v.phone && v.service && v.message;
+    errBox.hidden = !!ok;
+    if (!ok) {
+      errBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      (!v.name ? document.getElementById("q-name")
+        : !v.phone ? document.getElementById("q-phone")
+        : !v.service ? service
+        : document.getElementById("q-message")).focus();
+    }
+    return !!ok;
+  }
+
+  function body(v) {
+    var lines = ["Quote request from the B.A.T website", "",
+                 "Name: " + v.name, "Phone / WhatsApp: " + v.phone];
+    if (v.email) { lines.push("Email: " + v.email); }
+    if (v.area)  { lines.push("Area: " + v.area); }
+    lines.push("Service needed: " + v.service);
+    lines.push("Timing: " + v.urgency);
+    lines.push("", "Details:", v.message);
+    return lines.join("\n");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = values();
+    if (!valid(v)) { return; }
+    window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(body(v)), "_blank", "noopener");
+  });
+
+  document.getElementById("emailBtn").addEventListener("click", function () {
+    var v = values();
+    if (!valid(v)) { return; }
+    window.location.href = "mailto:" + EMAIL +
+      "?subject=" + encodeURIComponent("Quote request: " + v.service + " — " + v.name) +
+      "&body=" + encodeURIComponent(body(v));
+  });
+})();
+</script>
